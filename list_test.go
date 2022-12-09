@@ -148,6 +148,19 @@ func TestReverse(t *testing.T) {
 	assert.Equal(t, []int{4, 3, 2, 1}, list.ToArray())
 }
 
+func TestReverseOddNumberOfElements(t *testing.T) {
+	list := New[int]()
+
+	list.Add(1)
+	list.Add(2)
+	list.Add(3)
+	list.Add(4)
+	list.Add(5)
+	list.Reverse()
+
+	assert.Equal(t, []int{5, 4, 3, 2, 1}, list.ToArray())
+}
+
 //---------
 // BENCHES
 //---------
